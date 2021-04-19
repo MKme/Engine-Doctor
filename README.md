@@ -19,5 +19,6 @@ Buy a kit here: http://store.mkme.org
 Full video here:
 TBD 
 
-Max 6675 Thermocouple Example for ESP32 found here: 
-http://www.esp32learning.com/code/esp32-and-max6675-example.php
+Used Adafruit example code- seems to work fine if you change the default pins
+
+
