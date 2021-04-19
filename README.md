@@ -1,7 +1,7 @@
 
 <p align="center">
 <b>ESP32 Engine Doctor</b><br>
-Open Source<br><br>
+Use your smartphone web browser to view engine performance and sensor data<br><br>
 <br>🐦 <a href="https://twitter.com/mkmeorg">Twitter</a>
 | 📺 <a href="https://www.youtube.com/mkmeorg">YouTube</a>
 | 🌍 <a href="http://www.mkme.org">mkme.org</a><br>
