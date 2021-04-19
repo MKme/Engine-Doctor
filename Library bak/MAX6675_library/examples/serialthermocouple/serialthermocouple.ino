@@ -1,5 +1,5 @@
 // this example is public domain. enjoy!
-// www.ladyada.net/learn/sensors/thermocouple
+// https://learn.adafruit.com/thermocouple/
 
 #include "max6675.h"
 
@@ -8,15 +8,10 @@ int thermoCS = 5;
 int thermoCLK = 6;
 
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
-int vccPin = 3;
-int gndPin = 2;
-  
+
 void setup() {
   Serial.begin(9600);
-  // use Arduino pins 
-  pinMode(vccPin, OUTPUT); digitalWrite(vccPin, HIGH);
-  pinMode(gndPin, OUTPUT); digitalWrite(gndPin, LOW);
-  
+
   Serial.println("MAX6675 test");
   // wait for MAX chip to stabilize
   delay(500);
@@ -30,5 +25,6 @@ void loop() {
    Serial.print("F = ");
    Serial.println(thermocouple.readFahrenheit());
  
+   // For the MAX6675 to update, you must delay AT LEAST 250ms between reads!
    delay(1000);
 }
