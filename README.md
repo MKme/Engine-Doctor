@@ -34,12 +34,6 @@ Used Adafruit example code- seems to work fine if you change the default pins
 
 Pinout: 
 
-<img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/Lolin32_pinout03.png" width="700"/>
-
-
-
-
-<img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/s-l1600%20(1).jpg" width="700"/>
-
-
-
+<img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/Lolin32_pinout03.png"/>
+<img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/1.png"/>
+<img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/2.jpg"/>
