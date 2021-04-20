@@ -22,7 +22,9 @@ we can use to track/correlate our changes and even monitor saws with autotune or
 Buy a kit here: http://store.mkme.org
 
 ESP32 Wemos 32 Lite V1 : https://amzn.to/2QzS8t3
+
 MAX 6675 Thermocouple https://amzn.to/3tyqds0
+
 BME280: https://amzn.to/3x99uhg
 
 
