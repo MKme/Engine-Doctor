@@ -1,11 +1,16 @@
 // this example is public domain. enjoy!
 // https://learn.adafruit.com/thermocouple/
 
-#include "max6675.h"
 
-int thermoDO = 19;
-int thermoCS = 5;
-int thermoCLK = 18;
+
+
+#include "max6675.h"
+//Erics confirmed pins for the LOLIN 32 lite 
+int thermoDO = 19;  //SO on MAX breakout 
+int thermoCS = 5;  // CS on MAX 
+int thermoCLK = 18; //SCK on MAX 
+//MAX VCC to 3V on ESP32
+//GND > GND 
 
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
 
