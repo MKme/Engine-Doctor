@@ -17,6 +17,17 @@ Engine Doc for all chainsaws, small engines and automotive.
 The original ideea is to use this for performance chainsaw tuning by monitoring the EGT (exhaust gas temp) or cylinder/head temp we have valuable information 
 we can use to track/correlate our changes and even monitor saws with autotune or needs. 
 
+## Description:
+
+An ESP32 microcontroller with a high temp thermocouple interface you can mount in or stick to any surface you want to measure. 
+
+Also has a separate BME280 temp/baro and humidity sensor that will be in the box enclosure or you could remote mount it in an airbox or whatever. 
+
+I may make a one-wire inductive tachometer pickup too which will be interrupt driven and may need amp circuit
+
+The ESP32 makes its own Wifi AP you can log in to with your phone- open any browser to the IP in the pic and it will graph the data real time asynchronously on the web page as long as its powered on.  
+
+
 ##Parts:
 
 Buy a kit here: http://store.mkme.org
