@@ -68,7 +68,7 @@ setInterval(function ( ) {
   };
   xhttp.open("GET", "/temperature", true);
   xhttp.send();
-}, 5000 ) ;
+}, 1000 ) ;
 
 var chartH = new Highcharts.Chart({
   chart:{ renderTo:'chart-humidity' },
@@ -107,7 +107,7 @@ setInterval(function ( ) {
   };
   xhttp.open("GET", "/humidity", true);
   xhttp.send();
-}, 5000 ) ;
+}, 1000 ) ;
 
 var chartP = new Highcharts.Chart({
   chart:{ renderTo:'chart-pressure' },
@@ -147,7 +147,8 @@ setInterval(function ( ) {
   };
   xhttp.open("GET", "/pressure", true);
   xhttp.send();
-}, 5000 ) ;
+}, 1000 ) ;
+
 var chartT = new Highcharts.Chart({
   chart:{ renderTo:'chart-thermocouple' },
   title: { text: 'Thermocouple T' },
@@ -185,6 +186,6 @@ setInterval(function ( ) {
   };
   xhttp.open("GET", "/thermocouple", true);
   xhttp.send();
-}, 5000 ) ;
+}, 1000 ) ;
 </script>
 </html>

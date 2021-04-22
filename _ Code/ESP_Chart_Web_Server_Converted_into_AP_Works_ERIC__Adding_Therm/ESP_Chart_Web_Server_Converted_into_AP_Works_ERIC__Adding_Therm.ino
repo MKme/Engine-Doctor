@@ -102,7 +102,8 @@ String readBME280Pressure() {
     Serial.println(p);
     return String(p);
   }
-}//Eric added this to create a string for the thermocouple and pass it along 
+}
+
 String readthermocouple() {
   float thermocouple1 = thermocouple.readCelsius();
   if (isnan(thermocouple1)) {
@@ -144,26 +145,34 @@ thermotemp = thermocouple.readCelsius();
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
   Serial.println(IP);
-  server.begin();
+  WiFi.setSleep(WIFI_PS_NONE);
+ // server.begin();   // Dunno where this came from- commented out but no improvement much sad 
 
 
 
   // Route for root / web page
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on ("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/index.html");
   });
-  server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
+
+
+/*
+
+ 
+  server.on ("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBME280Temperature().c_str());
   });
-  server.on("/humidity", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on ("/humidity", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBME280Humidity().c_str());
   });
-  server.on("/pressure", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on ("/pressure", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBME280Pressure().c_str());
   });
 
-//Eric added this cloned above to get float 
-  server.on("/thermocouple", HTTP_GET, [](AsyncWebServerRequest *request){
+*/
+
+ 
+  server.on ("/thermocouple", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readthermocouple().c_str());
   });
 
