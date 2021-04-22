@@ -30,7 +30,7 @@ The ESP32 makes its own Wifi AP you can log in to with your phone- open any brow
 
 ## Parts:
 
-Buy a kit here: http://store.mkme.org
+Buy a kit here: https://store.mkme.org/?product_cat=custom
 
 ESP32 Wemos 32 Lite V1 : https://amzn.to/2QzS8t3
 
