@@ -17,6 +17,8 @@ Engine Doc for all chainsaws, small engines and automotive.
 The original ideea is to use this for performance chainsaw tuning by monitoring the EGT (exhaust gas temp) or cylinder/head temp we have valuable information 
 we can use to track/correlate our changes and even monitor saws with autotune or needs. 
 
+<img src="https://github.com/MKme/enginedoctor/blob/main/_%20photos/IMG_2200.jpg" width="700"/>
+
 ## Description:
 
 An ESP32 microcontroller with a high temp thermocouple interface you can mount in or stick to any surface you want to measure. 
