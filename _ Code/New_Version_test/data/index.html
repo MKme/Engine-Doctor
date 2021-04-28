@@ -149,9 +149,9 @@ setInterval(function ( ) {
   xhttp.send();
 }, 1000 ) ;
 
-var chartT = new Highcharts.Chart({
+var chartZ = new Highcharts.Chart({
   chart:{ renderTo:'chart-thermocouple' },
-  title: { text: 'Thermocouple T' },
+  title: { text: 'Thermocouple Temp' },
   series: [{
     showInLegend: false,
     data: []
@@ -177,10 +177,10 @@ setInterval(function ( ) {
       var x = (new Date()).getTime(),
           y = parseFloat(this.responseText);
       //console.log(this.responseText);
-      if(chartT.series[0].data.length > 40) {
-        chartT.series[0].addPoint([x, y], true, true, true);
+      if(chartZ.series[0].data.length > 40) {
+        chartZ.series[0].addPoint([x, y], true, true, true);
       } else {
-        chartT.series[0].addPoint([x, y], true, false, true);
+        chartZ.series[0].addPoint([x, y], true, false, true);
       }
     }
   };

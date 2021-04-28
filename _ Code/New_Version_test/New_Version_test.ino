@@ -21,7 +21,7 @@ Removed BME code untill hardware arrives WORKS!
 #include "max6675.h"
 //Erics confirmed pins for the LOLIN 32 lite 
 int thermoDO = 19;  //SO on MAX breakout 
-int thermoCS = 17;  // CS on MAX // ERIC moved from 5 to 17 as 5 seems to be used on BME below for CS 
+int thermoCS = 17;  // CS on MAX // ERIC moved from 5 to 17 
 int thermoCLK = 18; //SCK on MAX 
 //MAX VCC to 3V on ESP32
 //GND > GND 
@@ -55,26 +55,19 @@ int thermotemp = 0;
 #define BME_MOSI 23
 #define BME_CS 5*/
 
-
+// Added these defines myself from code I cound for ESP32 cam here: https://3iinc.xyz/blog/how-to-use-i2c-sensor-bme280-with-esp32cam/
 #define I2C_SDA 4 
 #define I2C_SCL 16
-TwoWire I2CSensors = TwoWire(0);
-Adafruit_BME280 bme;
+TwoWire I2CSensors = TwoWire(0);  //not sure if this is actually needed :)  
+Adafruit_BME280 bme; //I2c Init 
 
 
 
-
-
-//Adafruit_BME280 bme; // I2C
-
-//SCL GPIO 22
-//SDA GPIO 21
-
-
+// Not needed unless using SPI  
 //Adafruit_BME280 bme(BME_CS); // hardware SPI
 //Adafruit_BME280 bme(BME_CS, BME_MOSI, BME_MISO, BME_SCK); // software SPI
 
-// Replace with your network credentials
+// Name the Network SSID and give it a password if you desire 
 const char* ssid     = "EngineDoctor";
 const char* password = "";
 
@@ -91,6 +84,7 @@ String readBME280Temperature() {
     return "";
   }
   else {
+    Serial.print("BME Temp   C   ");
     Serial.println(t);
     return String(t);
   }
@@ -138,6 +132,8 @@ void setup(){
   // Serial port for debugging purposes
   Serial.begin(115200);
 
+//Init I2 and report if unavailable - Works!!!!!!!!!!!!  
+
 I2CSensors.begin(I2C_SDA, I2C_SCL, 100000);
 // BME 280 (0x77 or 0x76 will be the address)
   if (!bme.begin(0x76, &I2CSensors))
@@ -151,9 +147,7 @@ I2CSensors.begin(I2C_SDA, I2C_SCL, 100000);
   }
 
 
-
-
-  
+ 
 
 
     Serial.println("MAX6675 test");
@@ -202,9 +196,6 @@ thermotemp = thermocouple.readCelsius();
     request->send_P(200, "text/plain", readBME280Pressure().c_str());
   });
 
-
-
- 
   server.on ("/thermocouple", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readthermocouple().c_str());
   });
