@@ -52,13 +52,15 @@ TBD http://youtube.com/mkmeorg
 
 ### How to Use It
 
-1. Turn on EngineDoctor
+- Install the thermocouple where you would like to monitor (use a magnet mount if desired) 
 
-2. Connect to EngineDoctor Wifi (no password required)
+- Turn on EngineDoctor
 
-3. Open your web broswer to this url:  192.168.4.1
+- Connect to EngineDoctor Wifi (no password required)
 
-5. Watch the live values in real time while you test/tune!
+- Open your web broswer to this url:  192.168.4.1
+
+-  Watch the live values in real time while you test/tune!
 
 
 
