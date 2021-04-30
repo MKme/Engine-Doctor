@@ -61,7 +61,7 @@ TBD http://youtube.com/mkmeorg
 
 - Open your web broswer to this url:  192.168.4.1
 
--  Watch the live values in real time while you test/tune!
+- Watch the live values in real time while you test/tune!
 
 - Adjust the code if desired to alter the sample display rate (currently 1hz) 
 
