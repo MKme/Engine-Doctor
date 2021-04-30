@@ -45,7 +45,14 @@ BME280: https://amzn.to/3x99uhg
 
 TBD 
 
+### How I did things (ref) :
 
+
+Export PCB Footprint to make a case in fusion: https://forum.kicad.info/t/kicad-to-dxf-or-dwg/7994/2
+
+Make the case in fusion: https://www.youtube.com/watch?v=mhXUqtS4mDg&ab_channel=FixedUntilBroken
+
+Make an awesome snap fit case - Thanks Noe! https://www.youtube.com/watch?v=VVmOtM60VWw&ab_channel=AdafruitIndustries
 
 ### Pinout: 
 
