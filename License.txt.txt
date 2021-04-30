@@ -1,0 +1,5 @@
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. https://creativecommons.org/licenses/by-nc/4.0/ See comments in main code for detailed lineage
+
+Credit to original code work done by Rui santos. https://randomnerdtutorials.com/  Check out his amazing work and support his projects 
+
+All hardware design and KiCad library by www.mkme.org email info@mkme.org

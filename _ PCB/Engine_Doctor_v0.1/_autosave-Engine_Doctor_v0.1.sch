@@ -19,7 +19,7 @@ U 1 1 607EDFB4
 P 7950 5650
 F 0 "J2" H 7978 5626 50  0000 L CNN
 F 1 "BME280" H 7978 5535 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7950 5650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7950 5650 50  0001 C CNN
 F 3 "~" H 7950 5650 50  0001 C CNN
 	1    7950 5650
 	-1   0    0    1   
