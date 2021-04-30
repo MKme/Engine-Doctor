@@ -13,6 +13,8 @@ Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 # DIY ESP32 Engine monitoring for all internal combustion engines 
 Engine Doc for all chainsaws, small engines and automotive.  
 
+<img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/Schem.PNG"/>
+
 ## Use Case:
 The original ideea is to use this for performance chainsaw tuning by monitoring the EGT (exhaust gas temp) or cylinder/head temp we have valuable information 
 we can use to track/correlate our changes and even monitor saws with autotune or needs. 
@@ -29,7 +31,7 @@ I may make a one-wire inductive tachometer pickup too which will be interrupt dr
 
 The ESP32 makes its own Wifi AP you can log in to with your phone- open any browser to the IP in the pic and it will graph the data real time asynchronously on the web page as long as its powered on.  
 
-
+<img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/PCB%20render.PNG"/>
 ## Parts:
 
 Buy a kit here: https://store.mkme.org/?product_cat=custom
