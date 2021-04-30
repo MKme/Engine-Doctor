@@ -32,6 +32,7 @@ I may make a one-wire inductive tachometer pickup too which will be interrupt dr
 The ESP32 makes its own Wifi AP you can log in to with your phone- open any browser to the IP in the pic and it will graph the data real time asynchronously on the web page as long as its powered on.  
 
 <img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/PCB%20render.PNG"/>
+
 ## Parts:
 
 Buy a kit here: https://store.mkme.org/?product_cat=custom
@@ -45,7 +46,7 @@ BME280: https://amzn.to/3x99uhg
 
 ### Full video here:
 
-TBD 
+TBD http://youtube.com/mkmeorg
 
 ### How I did things (ref) :
 
