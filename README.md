@@ -27,11 +27,12 @@ we can use to track/correlate our changes and even monitor saws with autotune or
 
 An ESP32 microcontroller with a high temp thermocouple interface you can mount in or stick to any surface you want to measure. 
 
-Also has a separate BME280 temp/baro and humidity sensor that will be in the box enclosure or you could remote mount it in an airbox or whatever. 
+The ESP32 makes its own Wifi AP (shows up as Engine Doctor wifi network) you can log in to with your phone- open any browser to the IP in the pic and it will graph the data real time asynchronously on the web page as long as its powered on.  
 
-I may make a one-wire inductive tachometer pickup too which will be interrupt driven and may need amp circuit
+Also has a separate BME280 temp/baro and humidity sensor that will be in the box enclosure or you could remote mount it in an airbox or anywhere you desire.
 
-The ESP32 makes its own Wifi AP you can log in to with your phone- open any browser to the IP in the pic and it will graph the data real time asynchronously on the web page as long as its powered on.  
+Future Expansion- I may make a one-wire inductive tachometer pickup too which will be interrupt driven and may need amp circuit. All the spare GPIO are broken out on the PCB for this. 
+
 
 <img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/PCB%20render.PNG"/>
 
@@ -54,14 +55,15 @@ TBD http://youtube.com/mkmeorg
 
 - Install the thermocouple where you would like to monitor (use a magnet mount if desired) 
 
-- Turn on EngineDoctor
+- Power on he EngineDoctor
 
-- Connect to EngineDoctor Wifi (no password required)
+- Connect to EngineDoctor Wifi with your phone or tablet (no password required)
 
 - Open your web broswer to this url:  192.168.4.1
 
 -  Watch the live values in real time while you test/tune!
 
+- Adjust the code if desired to alter the sample display rate (currently 1hz) 
 
 
 ### How I did things (reference) :
@@ -73,7 +75,9 @@ Make the case in fusion: https://www.youtube.com/watch?v=mhXUqtS4mDg&ab_channel=
 
 Make an awesome snap fit case - Thanks Noe! https://www.youtube.com/watch?v=VVmOtM60VWw&ab_channel=AdafruitIndustries
 
-### Pinout: 
+
+### ESP32 Pinout: 
+
 
 <img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/Lolin32_pinout03.png"/>
 
