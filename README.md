@@ -56,7 +56,7 @@ TBD http://youtube.com/mkmeorg
 
 3. Open your web broswer to this url:  192.168.4.1
 
-5. Watch the live values in real tiem while you test/tune!
+5. Watch the live values in real time while you test/tune!
 
 
 
