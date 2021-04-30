@@ -48,7 +48,19 @@ BME280: https://amzn.to/3x99uhg
 
 TBD http://youtube.com/mkmeorg
 
-### How I did things (ref) :
+## How to Use It
+
+1. Turn on EngineDoctor
+
+2. Connect to EngineDoctor Wifi (no password required)
+
+3. Open your web broswer to this url:  192.158.4.1
+
+5. Watch the live values in real tiem while you test/tune!
+
+
+
+### How I did things (reference) :
 
 
 Export PCB Footprint to make a case in fusion: https://forum.kicad.info/t/kicad-to-dxf-or-dwg/7994/2
