@@ -20,7 +20,7 @@ The original ideea is to use this for performance chainsaw tuning by monitoring 
 we can use to track/correlate our changes and even monitor saws with autotune or needs. 
 
 <p align="center">
-<img src="https://github.com/MKme/enginedoctor/blob/main/_%20photos/IMG_2200.jpg" width="200"/>
+<img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/vlcsnap-2021-05-02-12h10m24s681.png" width="200"/>
 </p>
 
 ## Description:
