@@ -55,7 +55,7 @@ TBD http://youtube.com/mkmeorg
 
 - Install the thermocouple where you would like to monitor (use a magnet mount if desired) 
 
-- Power on he EngineDoctor
+- Power on the EngineDoctor
 
 - Connect to EngineDoctor Wifi with your phone or tablet (no password required)
 
