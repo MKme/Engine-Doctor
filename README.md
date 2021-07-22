@@ -51,6 +51,14 @@ BME280: https://amzn.to/3x99uhg
 
 TBD http://youtube.com/mkmeorg
 
+### Assembly
+
+- Solder BME 280- note SDC pin (furthest from VCC) is not used- Cut the pin or remove from header
+
+- Use female headers (not supplied in kit) if you would like to make the components removeable
+
+
+
 ### How to Use It
 
 - Install the thermocouple where you would like to monitor (use a magnet mount if desired) 
