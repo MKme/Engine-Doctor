@@ -57,6 +57,8 @@ TBD http://youtube.com/mkmeorg
 
 - Use female headers (not supplied in kit) if you would like to make the components removeable
 
+- Thermocouple wires can be stripped, tinned then fastened to the board. You can mount it direct with the pins but it is easier to remote mount it n the enclosure. 
+
 
 
 ### How to Use It
