@@ -75,6 +75,8 @@ You must be using a fairly recent Arduino IDE to upload spiffs (the web page fil
 
 Set up your IDE using these settings for the board:
 
+<img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/IDEsettings.png"/>
+
 Upload the board (if you get any errors make sure you have installed the Adafruit libraries for the BMP or for BMP280: https://github.com/MartinL1/BMP280_DEV#bmp280_dev_library
 
 Upload web page files Spiffs using the command "Tools> ESP32 Sketch Data Upload"
