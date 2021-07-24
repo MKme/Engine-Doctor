@@ -59,6 +59,13 @@ TBD http://youtube.com/mkmeorg
 
 - Thermocouple wires can be stripped, tinned then fastened to the board. You can mount it direct with the pins but it is easier to remote mount it n the enclosure. 
 
+### Code
+
+- Two flaors of code are now offered:
+
+1.  BME280 Version- This has Temp, Pressure and HUMIDITY with Thermocouple
+
+2.  BMP280 Version - This uses the cheaper BMP280 sensor without HUMIDITY
 
 
 ### How to Use It
