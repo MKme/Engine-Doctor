@@ -40,11 +40,13 @@ Future Expansion- I may make a one-wire inductive tachometer pickup too which wi
 
 Buy a kit here: https://store.mkme.org/?product_cat=custom
 
-ESP32 Wemos 32 Lite V1 : https://amzn.to/2QzS8t3
+| ESP32 Wemos 32 Lite V1 | https://amzn.to/2QzS8t3
 
-MAX 6675 Thermocouple https://amzn.to/3tyqds0
+| MAX 6675 Thermocouple | https://amzn.to/3tyqds0
 
-BME280: https://amzn.to/3x99uhg
+| BME280 | https://amzn.to/3x99uhg
+
+| BMP280 (cheaper) | https://amzn.to/3kTSyYb
 
 
 ### Full video here:
@@ -61,7 +63,7 @@ TBD http://youtube.com/mkmeorg
 
 ### Code
 
-- Two flaors of code are now offered:
+- Two flavours of code are now offered:
 
 1.  BME280 Version- This has Temp, Pressure and HUMIDITY with Thermocouple
 
