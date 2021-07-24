@@ -31,7 +31,7 @@ Adapted from Rui Santos - https://RandomNerdTutorials.com
 <script>
 var chartT = new Highcharts.Chart({
   chart:{ renderTo : 'chart-temperature' },
-  title: { text: 'BME280 Temperature' },
+  title: { text: 'BMP280 Temperature' },
   series: [{
     showInLegend: false,
     data: []
@@ -69,10 +69,9 @@ setInterval(function ( ) {
   xhttp.send();
 }, 1000 ) ;
 
-
 var chartP = new Highcharts.Chart({
   chart:{ renderTo:'chart-pressure' },
-  title: { text: 'BME280 Pressure' },
+  title: { text: 'BMP280 Pressure' },
   series: [{
     showInLegend: false,
     data: []

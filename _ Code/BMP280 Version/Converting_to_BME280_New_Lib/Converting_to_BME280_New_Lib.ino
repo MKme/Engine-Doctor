@@ -2,12 +2,14 @@
   Some code adapted from Rui Santos at https://RandomNerdTutorials.com
   Check out his site and give him some support
 
+//Eric used Martins Library here: https://github.com/MartinL1/BMP280_DEV#bmp280_dev_library
 
+//Adafruit library just refused to work on my ESP32 - the settigns below are reading yay!    
 
-I cannot get bmp to read
+Completely working with BMP280 now!!!  
+Humidity display removed
+Excess serial debugging is left in place here so others can add code as they want for IO etc
 
-it is detected on scanner fine 
-//Eric confirms BMP280 found at normal location 0x76 When using my modified I2C scanner 
   
 *********/
 #include "max6675.h"
@@ -19,7 +21,6 @@ int thermoCLK = 18; //SCK on MAX
 //GND > GND 
 
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
-
 int thermotemp = 0;
 
 
@@ -38,11 +39,8 @@ int thermotemp = 0;
   #include <FS.h>
 #endif
 #include <Wire.h>
-#include <SPI.h>
 #include <Adafruit_Sensor.h>
-#include <Adafruit_BMP280.h>
-
-
+#include <Adafruit_BME280.h>
 
 /*#include <SPI.h>
 #define BME_SCK 18
@@ -50,13 +48,13 @@ int thermotemp = 0;
 #define BME_MOSI 23
 #define BME_CS 5*/
 
+#include <BMP280_DEV.h>  
 // Added these defines myself from code I cound for ESP32 cam here: https://3iinc.xyz/blog/how-to-use-i2c-sensor-bme280-with-esp32cam/
 #define I2C_SDA 4 
 #define I2C_SCL 16
 TwoWire I2CSensors = TwoWire(0);  //not sure if this is actually needed :)  
-Adafruit_BMP280 bmp; // use I2C interface
-Adafruit_Sensor *bmp_temp = bmp.getTemperatureSensor();
-Adafruit_Sensor *bmp_pressure = bmp.getPressureSensor();
+float temperature, pressure, altitude;            // Create the temperature, pressure and altitude variables
+BMP280_DEV bmp280(4, 16);                        // Instantiate (create) a BMP280 object and set-up for I2C operation on pins SDA: A6, SCL: A7
 
 
 
@@ -67,13 +65,12 @@ const char* password = "";
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 
+  
 String readBMP280Temperature() {
   // Read temperature as Celsius (the default)
-  float t = bmp.readTemperature();
-  // Convert temperature to Fahrenheit
-  //t = 1.8 * t + 32;
+  float t = (temperature);
   if (isnan(t)) {    
-    Serial.println("Failed to read from BME280 sensor!");
+    Serial.println("Failed to read from BMP280 sensor!");
     return "";
   }
   else {
@@ -84,18 +81,10 @@ String readBMP280Temperature() {
 }
 
 
-
 String readBMP280Pressure() {
-  sensors_event_t temp_event, pressure_event;
-  bmp_temp->getEvent(&temp_event);
-  bmp_pressure->getEvent(&pressure_event);
-
-  Serial.print(F("Pressure = "));
-  float p = (pressure_event.pressure);
-    Serial.print(pressure_event.pressure);
-  Serial.println(" hPa");
+  float p = (pressure);
   if (isnan(p)) {
-    Serial.println("Failed to read from BME280 sensor!");
+    Serial.println("Failed to read from BMP280 sensor!");
     return "";
   }
   else {
@@ -119,33 +108,16 @@ String readthermocouple() {
 
 
 void setup(){
-    Wire.begin();
-    I2CSensors.begin(I2C_SDA, I2C_SCL, 100000);
+
+  I2CSensors.begin(I2C_SDA, I2C_SCL, 100000);
+    bmp280.begin(BMP280_I2C_ALT_ADDR);
   // Serial port for debugging purposes
-  Serial.begin(115200);
+  Serial.begin(115200);                           // Initialise the serial port
+  //bmp280.begin();                                 // Default initialisation, place the BMP280 into SLEEP_MODE 
+  bmp280.setTimeStandby(TIME_STANDBY_2000MS);     // Set the standby time to 2 seconds
+  bmp280.startNormalConversion();                 // Start BMP280 continuous conversion in NORMAL_MODE
 
-//Init I2 and report if unavailable - Works!!!!!!!!!!!!  
 
-  Serial.println(F("BMP280 Sensor event test"));
-
-
-  if (!bmp.begin(BMP280_ADDRESS_ALT, BMP280_CHIPID)) {
-
-  //fix found here didnt fix it  http://www.skillbank.co.uk/arduino/NodeI2CSPI.htm
-   //if (!bmp.begin()) {
-    Serial.println(F("Could not find a valid BMP280 sensor, check wiring or "
-                      "try a different address!"));
-    while (1) delay(10);
-  }
-
- /* Default settings from datasheet. */
-  bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
-                  Adafruit_BMP280::SAMPLING_X2,     /* Temp. oversampling */
-                  Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
-                  Adafruit_BMP280::FILTER_X16,      /* Filtering. */
-                  Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
-
-  bmp_temp->printSensorDetails();
 
 
     Serial.println("MAX6675 test");
@@ -187,6 +159,7 @@ thermotemp = thermocouple.readCelsius();
   server.on ("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBMP280Temperature().c_str());
   });
+  
   server.on ("/pressure", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBMP280Pressure().c_str());
   });
@@ -200,16 +173,14 @@ thermotemp = thermocouple.readCelsius();
 }
  
 void loop(){
-  sensors_event_t temp_event, pressure_event;
-  bmp_temp->getEvent(&temp_event);
-  bmp_pressure->getEvent(&pressure_event);
+  if (bmp280.getMeasurements(temperature, pressure, altitude))    // Check if the measurement is complete
+  {
+    Serial.print(temperature);                    // Display the results    
+    Serial.print(F("*C   "));
+    Serial.print(pressure);    
+    Serial.print(F("hPa   "));
+    Serial.print(altitude);
+    Serial.println(F("m"));  
+  }
   
-  Serial.print(F("Temperature = "));
-  Serial.print(temp_event.temperature);
-  Serial.println(" *C");
-
-  Serial.print(F("Pressure = "));
-  Serial.print(pressure_event.pressure);
-  Serial.println(" hPa");
-
 }
