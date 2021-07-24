@@ -43,13 +43,9 @@ Buy a kit here: https://store.mkme.org/?product_cat=custom
 
 |     Component    | Source  |
 | ---------- |----------------|
-
 | ESP32 Wemos 32 Lite V1 | https://amzn.to/2QzS8t3
-
 | MAX 6675 Thermocouple | https://amzn.to/3tyqds0
-
 | BME280 | https://amzn.to/3x99uhg
-
 | BMP280 (cheaper) | https://amzn.to/3kTSyYb
 
 
