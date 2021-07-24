@@ -59,7 +59,7 @@ TBD http://youtube.com/mkmeorg
 
 - Use female headers (not supplied in kit) if you would like to make the components removeable
 
-- Thermocouple wires can be stripped, tinned then fastened to the board. You can mount it direct with the pins but it is easier to remote mount it n the enclosure. 
+
 
 ### Code
 
@@ -68,6 +68,18 @@ TBD http://youtube.com/mkmeorg
 1.  BME280 Version- This has Temp, Pressure and HUMIDITY with Thermocouple
 
 2.  BMP280 Version - This uses the cheaper BMP280 sensor without HUMIDITY
+
+To upload the code you must install ESP32 board support- Google for tutorials
+
+You must be using a fairly recent Arduino IDE to upload spiffs (the web page files)  
+
+Set up your IDE using these settings for the board:
+
+Upload the board (if you get any errors make sure you have installed the Adafruit libraries for the BMP or for BMP280: https://github.com/MartinL1/BMP280_DEV#bmp280_dev_library
+
+Upload web page files Spiffs using the command "Tools> ESP32 Sketch Data Upload"
+
+
 
 
 ### How to Use It
