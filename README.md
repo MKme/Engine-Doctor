@@ -116,4 +116,4 @@ Make an awesome snap fit case - Thanks Noe! https://www.youtube.com/watch?v=VVmO
 
 <img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/2.jpg"/>
 
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. https://creativecommons.org/licenses/by-nc/4.0/ See notes.h and comments in main code for detailed lineage/license info
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. https://creativecommons.org/licenses/by-nc/4.0/ See comments in main code for more info
