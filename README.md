@@ -40,22 +40,55 @@ Future Expansion- I may make a one-wire inductive tachometer pickup too which wi
 
 Buy a kit here: https://store.mkme.org/?product_cat=custom
 
-ESP32 Wemos 32 Lite V1 : https://amzn.to/2QzS8t3
 
-MAX 6675 Thermocouple https://amzn.to/3tyqds0
-
-BME280: https://amzn.to/3x99uhg
+|     Component    | Source  |
+| ---------- |----------------|
+| ESP32 Wemos 32 Lite V1 | https://amzn.to/2QzS8t3
+| MAX 6675 Thermocouple | https://amzn.to/3tyqds0
+| BME280 | https://amzn.to/3x99uhg
+| BMP280 (cheaper) | https://amzn.to/3kTSyYb
 
 
 ### Full video here:
 
 TBD http://youtube.com/mkmeorg
 
+### Assembly
+
+- Solder BME 280- note SDC pin (furthest from VCC) is not used- Cut the pin or remove from header
+
+- Use female headers (not supplied in kit) if you would like to make the components removeable
+
+
+
+### Code
+
+- Two flavours of code are now offered:
+
+1.  BME280 Version- This has Temp, Pressure and HUMIDITY with Thermocouple
+
+2.  BMP280 Version - This uses the cheaper BMP280 sensor without HUMIDITY
+
+To upload the code you must install ESP32 board support- Google for tutorials
+
+You must be using a fairly recent Arduino IDE to upload spiffs (the web page files)  
+
+Set up your IDE using these settings for the board:
+
+<img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/IDEsettings.png"/>
+
+Upload the board (if you get any errors make sure you have installed the Adafruit libraries for the BMP or for BMP280: https://github.com/MartinL1/BMP280_DEV#bmp280_dev_library
+
+Upload web page files Spiffs using the command "Tools> ESP32 Sketch Data Upload"
+
+
+
+
 ### How to Use It
 
 - Install the thermocouple where you would like to monitor (use a magnet mount if desired) 
 
-- Power on he EngineDoctor
+- Power on the EngineDoctor
 
 - Connect to EngineDoctor Wifi with your phone or tablet (no password required)
 
@@ -82,3 +115,5 @@ Make an awesome snap fit case - Thanks Noe! https://www.youtube.com/watch?v=VVmO
 <img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/Lolin32_pinout03.png"/>
 
 <img src="https://github.com/MKme/ESP32/blob/main/Wemos%2032%20Lite%20Board/pics/2.jpg"/>
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. https://creativecommons.org/licenses/by-nc/4.0/ See comments in main code for more info
