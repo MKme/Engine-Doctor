@@ -13,6 +13,8 @@ Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 # DIY ESP32 Engine monitoring for all internal combustion engines 
 Engine Doc for all chainsaws, small engines and automotive.  
 
+Buy a kit on my store here: https://store.mkme.org/?product=diy-engine-doctor-esp32-egt-engine-tuning-temp-kit
+
 <img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/Schem.PNG"/>
 
 ## Use Case:
@@ -39,7 +41,8 @@ Lipo battery plugs in to ESP32 and is charged by USB https://amzn.to/3kI5tL8
 
 ## Parts:
 
-Buy a kit here: https://store.mkme.org/?product_cat=custom
+
+Buy a kit on my store here: https://store.mkme.org/?product=diy-engine-doctor-esp32-egt-engine-tuning-temp-kit
 
 
 |     Component    | Source  |
