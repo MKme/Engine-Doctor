@@ -1,10 +1,17 @@
 /*********
-  Some code adapted from Rui Santos at https://RandomNerdTutorials.com
-  Check out his site and give him some support
+My Youtube Channel  : http://www.youtube.com/mkmeorg
+If you use this code or personalize it etc- please consider sharing it back with the world via the forum at http://www.mkme.org/forum
+Website, Forum http://mkme.org
+Chat with Me: Discord http://mkme.org/discord
+Store http://mkme.org/store
+Buy a parts kit on my store: https://store.mkme.org/?product=diy-engine-doctor-esp32-egt-engine-tuning-temp-kit  
+  
+Some code adapted from Rui Santos at https://RandomNerdTutorials.com
+Check out his site and give him some support
 
-//Eric used Martins Library here: https://github.com/MartinL1/BMP280_DEV#bmp280_dev_library
+Eric used Martins Library here: https://github.com/MartinL1/BMP280_DEV#bmp280_dev_library
 
-//Adafruit library just refused to work on my ESP32 - the settigns below are reading yay!    
+Adafruit library just refused to work on my ESP32 - the settings below are reading yay!    
 
 Completely working with BMP280 now!!!  
 Humidity display removed
