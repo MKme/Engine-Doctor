@@ -55,7 +55,7 @@ Buy a kit on my store here: https://store.mkme.org/?product=diy-engine-doctor-es
 
 ### Full video here:
 
-TBD http://youtube.com/mkmeorg
+https://www.youtube.com/watch?v=tzVUzIC2Xmo
 
 ### Assembly
 
