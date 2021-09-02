@@ -13,6 +13,8 @@ Chat: <a href="https://discord.gg/j9S4Fgv">Discord</a></b>!
 # DIY ESP32 Engine monitoring for all internal combustion engines 
 Engine Doc for all chainsaws, small engines and automotive.  
 
+Buy a kit on my store here: https://store.mkme.org/?product=diy-engine-doctor-esp32-egt-engine-tuning-temp-kit
+
 <img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/Schem.PNG"/>
 
 ## Use Case:
@@ -32,13 +34,15 @@ The ESP32 makes its own Wifi AP (shows up as Engine Doctor wifi network) you can
 Also has a separate BME280 temp/baro and humidity sensor that will be in the box enclosure or you could remote mount it in an airbox or anywhere you desire.
 
 Future Expansion- I may make a one-wire inductive tachometer pickup too which will be interrupt driven and may need amp circuit. All the spare GPIO are broken out on the PCB for this. 
+Lipo battery plugs in to ESP32 and is charged by USB https://amzn.to/3kI5tL8
 
 
 <img src="https://github.com/MKme/Engine-Doctor/blob/main/_%20photos/PCB%20render.PNG"/>
 
 ## Parts:
 
-Buy a kit here: https://store.mkme.org/?product_cat=custom
+
+Buy a kit on my store here: https://store.mkme.org/?product=diy-engine-doctor-esp32-egt-engine-tuning-temp-kit
 
 
 |     Component    | Source  |
@@ -51,7 +55,7 @@ Buy a kit here: https://store.mkme.org/?product_cat=custom
 
 ### Full video here:
 
-TBD http://youtube.com/mkmeorg
+https://www.youtube.com/watch?v=tzVUzIC2Xmo
 
 ### Assembly
 
